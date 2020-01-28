@@ -370,44 +370,14 @@ void pattern9(){ //collide vertical layers from 2 different directions
 }
 
 void loop(){
-  /*
-  analogWrite(A2,0);
-  analogWrite(A1,0);
-  analogWrite(A0,0);
-  
-  Serial.println("loop");
-    delay(1000);
-  for(int i=0;i<9;i++){
-    digitalWrite(ledPin[i],1);
-    delay(500);
-    digitalWrite(ledPin[i],0);
-    delay(500);
-  }
-  */
-  /*
-  analogWrite(A2,0);
-    digitalWrite(ledPin[4], 1);
-    delay(1000);
-    digitalWrite(ledPin[4], 0);
-    analogWrite(A2,1);
-  delay(1000);
-  */
+ 
   digitalWrite(A0,1);
   digitalWrite(A1,1);
   digitalWrite(A2,1);
-  /*
-  for(int j=0;j<3;j++){
-    for (int i=0;i<9;i++){
-    ledOn(j,i,250);   
-    }
-  }
-  */
   
-  // potentiometer
   
   sensorValue = analogRead(A5);
   // Convert the analog reading (which goes from 0 - 1023) 
-  // print out the value you read:
   
   int a=map(sensorValue, 0, 1023, 1, 7);
   Serial.println(a);
@@ -441,48 +411,6 @@ void loop(){
 }
 
   
-  //pattern8();
-   //turnAllLayersOn();
-  //Serial.println("endgame");
   
-  //delay(2000);
-  
-  
-  /*
-  digitalWrite(A0,LOW);    //layer 1 of cube is grounded
-          for (int i=0;i<9;i++)
-          {
-              digitalWrite(ledPin[i],HIGH);    //turn ON each LED one after another in layer1
-              delay(200);
-                delay(200);
-                  delay(200);
-            digitalWrite(ledPin[i],LOW);
-          }
-        digitalWrite(A0,HIGH);    //layer1 is pulled up
-          */
-  /*
-          digitalWrite(A1,LOW);   // layer 2 of cube is grounded
-          for (int i=2;i<11;i++)
-          {
-              digitalWrite(ledPin[i],HIGH);   // turn ON each LED one after another in layer2
-                            delay(200);
-                            delay(200);
-                            delay(200);
-              digitalWrite(ledPin[i],LOW);
-          }
-        digitalWrite(A1,HIGH);    // layer2 is pulled up7
-        */
-          /*
-        digitalWrite(A2,LOW);    // layer 3 of cube is grounded
-        for (int i=2;i<11;i++)
-        {
-            digitalWrite(ledPin[i],HIGH);    // turn ON each LED one after another in layer3
-                          delay(200);
-                          delay(200);
-                          delay(200);
-            digitalWrite(ledPin[i],LOW);
-        }
-        digitalWrite(A2,HIGH);    // layer3 is pulled up
-  `*/
 }
   
